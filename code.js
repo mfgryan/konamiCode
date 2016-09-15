@@ -10,17 +10,21 @@ var size = '0px 50px, 0px 150px, 0px 450px, 0px 525px, 190px 85px, 550px 85px,'+
 var sequence = [38,38,40,40,37,39,37,39,66,65]; //konami sequence
 var key = function(i){
     if(i < sequence.length){
+        $('body').unbind('keyup');
+        $('body').unbind('keydown');
         $('body').keyup(function(e){
             if(e.keyCode == sequence[i] && i == sequence.length-1){
                 $('body').css('background-image', images);
                 $('body').css('background-repeat', repeat);
                 $('body').css('background-position', size);
-                $('body').unbind('keyup');
+                $('body').keydown(function(e){key(0);});
                 setTimeout(function(){$('body').css('background', 'transparent');}, 30000);
             }else if(e.keyCode == sequence[i]){
                 key(i+1);
-            }else{
-                $('body').unbind('keyup');
+            }else{ 
+                $('body').keydown(function(e){
+                    key(0);
+                }); 
             }
         });
     }
