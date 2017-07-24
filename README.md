@@ -7,5 +7,5 @@ The Konami code easter egg written in JavaScript and [JQuery](https://jquery.com
 2. Replace the images with images of your choosing.
 3. Save and type the konmai sequence on your site. 
 
-**`up up down down left right left right B A Enter`**
+> **`up up down down left right left right B A Enter`**
 
