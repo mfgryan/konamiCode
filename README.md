@@ -1,7 +1,7 @@
 # konamiCode
 The Konami code easter egg written in JavaScript and [JQuery](https://jquery.com/)
 
-## USE
+## Use
 
 1. Copy and paste code.js anywhere into your front end JS code.
 2. Replace the images with images of your choosing.
